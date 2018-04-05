@@ -27,27 +27,27 @@ The Docker image is built on top of the Ubuntu 17.10 base image. It is available
 ## Linux or Mac
 ```
 $ docker run --rm \
-	-v /local_path_to_ca.crt:/usr/src/certs/ca.crt \
-	-v /local_path_where_you_want_config_file_created:/certs \
-	-v ~/.kube/config:/root/.kube/config \
-	-e USER_NAME=username_to_create \
-	-e GROUPS=/o=group_to_assign_user_to \
-	-e CLUSTER_NAME=clustername \
-	-e SERVER_URL=URL_to_server \
-	rbagby/kubernetes-cert-creator:0.1
+-v /local_path_to_ca.crt:/usr/src/certs/ca.crt \
+-v /local_path_where_you_want_config_file_created:/certs \
+-v ~/.kube/config:/root/.kube/config \
+-e USER_NAME=username_to_create \
+-e GROUPS=/o=group_to_assign_user_to \
+-e CLUSTER_NAME=clustername \
+-e SERVER_URL=URL_to_server \
+rbagby/kubernetes-cert-creator:0.1
 ```
 
 The following is a working example on my mac:
 ```
 $ docker run --rm \
-	-v /Users/robbagby/Documents/Development/Temp/input/ca.crt:/usr/src/certs/ca.crt \
-	-v /Users/robbagby/Documents/Development/Temp/output:/certs \
-	-v ~/.kube/config:/root/.kube/config \
-	-e USER_NAME=test \
-	-e GROUPS=/o=deployers \
-	-e CLUSTER_NAME=clustername \
-	-e SERVER_URL=https://bagbydefntwk.westus.cloudapp.azure.com \
-	rbagby/kubernetes-cert-creator:0.1
+-v /Users/robbagby/Documents/Development/Temp/input/ca.crt:/usr/src/certs/ca.crt \
+-v /Users/robbagby/Documents/Development/Temp/output:/certs \
+-v ~/.kube/config:/root/.kube/config \
+-e USER_NAME=test \
+-e GROUPS=/o=deployers \
+-e CLUSTER_NAME=clustername \
+-e SERVER_URL=https://bagbydefntwk.westus.cloudapp.azure.com \
+rbagby/kubernetes-cert-creator:0.1
 ```
 
 I could then use the generated config file to connect to my cluster
