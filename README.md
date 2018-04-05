@@ -62,6 +62,7 @@ Clearly the user does not have any rights, but you were able to connect.  Update
 
 ## Details on parameters
 You need to provide several things in order to create a kubernetes config file for a new user:
+
 | Asset | Type | Description |
 | --------------------- | ---------------------- | --------------------------------------- |
 | ca.crt | Mapped Volume |Map the local path to the ca.crt from your cluster to /usr/src/certs/ca.crt.  The ca.crt file can be found at /etc/kubernetes/certs/ca.crt on your master if you used acs-engine to create the cluster. You can use scp (or pscp on Windows) to copy this file from your server |
