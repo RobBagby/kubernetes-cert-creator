@@ -65,7 +65,7 @@ You need to provide several things in order to create a kubernetes config file f
 
 | Asset | Type | Description |
 | --------------------- | ---------------------- | --------------------------------------- |
-| ca.crt | Mapped Volume |Map the local path to the ca.crt from your cluster to /usr/src/certs/ca.crt.  The ca.crt file can be found at /etc/kubernetes/certs/ca.crt on your master if you used acs-engine to create the cluster. You can use scp (or pscp on Windows) to copy this file from your server |
+| ca.crt | Mapped Volume |Map the local path to the ca.crt from your cluster to /etc/kubernetes/certs/ca.crt.  The ca.crt file can be found at /etc/kubernetes/certs/ca.crt on your master if you used acs-engine to create the cluster. You can use scp (or pscp on Windows) to copy this file from your server |
 | kubeconfig file | Mapped Volume | Map the path to a kubeconfig file to the file /root/.kube/config.  Make sure you map the actual kubeconfig file to the actual file named config in the container |
 | Output directory | Mapped Volume | Map the path of a directory where you want the config file created to /certs in the container |
 | USER_NAME | Environment Variable | The name of the user to create |
